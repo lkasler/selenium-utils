@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>hu.kasler</groupId>
-	<artifactId>selenium-utils</artifactId>
-	<packaging>pom</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+    <groupId>hu.kasler</groupId>
+    <artifactId>selenium-utils</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
 
-	<properties>
-		<scm.trunk/>
-		<scm.tagbase/>
-		<url/>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<version.logback>1.2.3</version.logback>
+    <properties>
+        <scm.trunk/>
+        <scm.tagbase/>
+        <url/>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <version.logback>1.2.3</version.logback>
         <version.webdrivermanager>2.2.4</version.webdrivermanager>
         <version.selenium-java>3.9.1</version.selenium-java>
         <version.junit-jupiter-engine>5.1.0</version.junit-jupiter-engine>
-		<version.commons-io>2.6</version.commons-io>
+        <version.commons-io>2.6</version.commons-io>
         <version.commons-lang3>3.7</version.commons-lang3>
         <version.junit-platform-launcher>1.2.0</version.junit-platform-launcher>
     </properties>
 
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-classic</artifactId>
-				<version>${version.logback}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.github.bonigarcia</groupId>
-				<artifactId>webdrivermanager</artifactId>
-				<version>${version.webdrivermanager}</version>
-			</dependency>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${version.logback}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.bonigarcia</groupId>
+                <artifactId>webdrivermanager</artifactId>
+                <version>${version.webdrivermanager}</version>
+            </dependency>
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
@@ -48,11 +49,11 @@
                 <artifactId>junit-jupiter-engine</artifactId>
                 <version>${version.junit-jupiter-engine}</version>
             </dependency>
-			<dependency>
-				<groupId>commons-io</groupId>
-				<artifactId>commons-io</artifactId>
-				<version>${version.commons-io}</version>
-			</dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${version.commons-io}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
@@ -63,43 +64,43 @@
                 <artifactId>junit-platform-launcher</artifactId>
                 <version>${version.junit-platform-launcher}</version>
             </dependency>
-		</dependencies>
-	</dependencyManagement>
+        </dependencies>
+    </dependencyManagement>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-					<tagBase>${scm.tagbase}</tagBase>
-				</configuration>
-				<version>2.5.3</version>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <tagBase>${scm.tagbase}</tagBase>
+                </configuration>
+                <version>2.5.3</version>
+            </plugin>
+        </plugins>
+    </build>
 
-	<modules>
-		<module>selenium-utils-common</module>
-		<module>selenium-utils-demo</module>
-	</modules>
+    <modules>
+        <module>selenium-utils-common</module>
+        <module>selenium-utils-demo</module>
+    </modules>
 
-	<scm>
-		<connection>scm:svn:${scm.trunk}</connection>
-		<developerConnection>scm:svn:${scm.trunk}</developerConnection>
-	</scm>
+    <scm>
+        <connection>scm:svn:${scm.trunk}</connection>
+        <developerConnection>scm:svn:${scm.trunk}</developerConnection>
+    </scm>
 
-	<distributionManagement>
-		<repository>
-			<id>release</id>
-			<uniqueVersion>false</uniqueVersion>
-			<url/>
-		</repository>
-		<snapshotRepository>
-			<id>snapshot</id>
-			<uniqueVersion>false</uniqueVersion>
-			<url/>
-		</snapshotRepository>
-	</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>release</id>
+            <uniqueVersion>false</uniqueVersion>
+            <url/>
+        </repository>
+        <snapshotRepository>
+            <id>snapshot</id>
+            <uniqueVersion>false</uniqueVersion>
+            <url/>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

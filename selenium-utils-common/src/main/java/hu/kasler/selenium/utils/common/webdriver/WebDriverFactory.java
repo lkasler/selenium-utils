@@ -9,10 +9,11 @@ import org.openqa.selenium.WebDriver;
 
 public interface WebDriverFactory {
 
-     /**
-      * Returns the requested driverManagerType's WebDriver.
-      * @param driverManagerType driver manager type representing browser
-      * @return Webdriver
-      */
+    /**
+     * Returns the requested driverManagerType's WebDriver.
+     *
+     * @param driverManagerType driver manager type representing browser
+     * @return Webdriver
+     */
     WebDriver getWebDriver(DriverManagerType driverManagerType);
 }
