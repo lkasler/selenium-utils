@@ -1,4 +1,4 @@
-package hu.kasler.selenium.utils.demo;
+package hu.kasler.selenium.utils.common;
 
 
 import hu.kasler.selenium.utils.common.webdriver.DefaultWebDriverFactory;
@@ -11,9 +11,9 @@ import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class GoogleTest {
+public class SeleniumWebdrivermManagerTest {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GoogleTest.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SeleniumWebdrivermManagerTest.class);
 
     @Test
     void testWithChrome() {
@@ -22,7 +22,7 @@ public class GoogleTest {
         driver.get("http://www.google.com/ncr");
         WebElement element = driver.findElement(By.name("q"));
 
-        element.sendKeys("Sbpsystems");
+        element.sendKeys("Selenium");
         element.submit();
 
         LOGGER.info(driver.getTitle(), driver.getCurrentUrl());
