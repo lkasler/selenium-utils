@@ -96,7 +96,8 @@
     <scm>
         <connection>scm:git:https://github.com/lkasler/selenium-utils.git</connection>
         <developerConnection>scm:git:https://github.com/lkasler/selenium-utils.git</developerConnection>
-        <url>https://github.com/lkasler/selenium-utils</url>
+        <url>https://github.com/lkasler/selenium-utils/tree/${project.scm.tag}</url>
+        <tag>master</tag>
     </scm>
 
 
