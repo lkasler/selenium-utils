@@ -24,6 +24,8 @@
         <version.commons-io>2.6</version.commons-io>
         <version.commons-lang3>3.7</version.commons-lang3>
         <version.junit-platform-launcher>1.2.0</version.junit-platform-launcher>
+        <version.maven-release-plugin>2.5.3</version.maven-release-plugin>
+        <version.maven-scm-api>1.10.0</version.maven-scm-api>
     </properties>
 
 
@@ -68,16 +70,22 @@
     </dependencyManagement>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <configuration>
-                    <tagBase>${scm.tagbase}</tagBase>
-                </configuration>
-                <version>2.5.3</version>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${version.maven-release-plugin}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.scm</groupId>
+                            <artifactId>maven-scm-api</artifactId>
+                            <version>${version.maven-scm-api}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <modules>
@@ -86,9 +94,11 @@
     </modules>
 
     <scm>
-        <connection>scm:svn:${scm.trunk}</connection>
-        <developerConnection>scm:svn:${scm.trunk}</developerConnection>
+        <connection>scm:git:https://github.com/lkasler/selenium-utils.git</connection>
+        <developerConnection>scm:git:https://github.com/lkasler/selenium-utils.git</developerConnection>
+        <url>https://github.com/lkasler/selenium-utils</url>
     </scm>
+
 
     <distributionManagement>
         <repository>
